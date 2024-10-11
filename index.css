@@ -14,7 +14,7 @@
 }
 
 .left {
-  background: url("../Form/assets/Group\ 30855.png") no-repeat;
+  background: url("./assets/Group\ 30855.png") no-repeat;
   background-position: center;
   background-size: cover;
   width: 45%;
@@ -84,7 +84,7 @@ h4 {
   color: #ffffff;
   font-size: 16px;
 }
-    
+
 .items li::before {
   content: url("../Form/assets/Group\ 21461.png");
   background: transparent;
