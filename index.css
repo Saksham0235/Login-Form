@@ -11,6 +11,7 @@
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: row;
 }
 
 .left {
@@ -18,12 +19,13 @@
   display: flex;
   background-position: center;
   background-size: cover;
-  width: 45%;
+  width: 50%;
   position: relative;
 }
 
 .right {
-  width: 55%;
+  width: 50%;
+  height: auto;
   background: #f1f1f1;
 }
 .head {
@@ -31,17 +33,35 @@
   top: 30px;
   left: 40px;
 }
+.head h5 {
+  font-size: 26px;
+  font-weight: 900;
+  color: #ffffff;
+}
+.head h4 {
+  font-size: 28px;
+  font-weight: 500;
+  color: #ffffff;
+}
 .items {
   position: absolute;
   top: 155px;
   left: 40px;
   opacity: 0.8;
+  display: flex;
+}
+.items li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 16px;
 }
 .h-para {
   position: absolute;
-  bottom: 200px;
-  left: 150px;
-  letter-spacing: 0.5px;
+  bottom: 150px;
+  left: 25%;
 }
 .icons {
   position: absolute;
@@ -57,32 +77,14 @@
   margin: 20px auto;
   display: flex;
   flex-direction: column;
+  
 }
 .form-div {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  height: 500px;
   gap: 20px;
-}
-.head h5 {
-  font-size: 26px;
-  font-weight: 500;
-  color: #ffffff;
-}
-.head h4 {
-  font-size: 28px;
-  font-weight: 500;
-  color: #ffffff;
-}
-.items li {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  color: #ffffff;
-  font-size: 16px;
 }
 
 .items li::before {
@@ -120,7 +122,7 @@ h2 {
 }
 
 .logo {
-  margin: 20px auto;
+  margin: auto;
 }
 
 .div {
@@ -128,6 +130,15 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.select-div {
+  position: relative;
+  border: 1px solid #d8e2f3;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 10px;
+  display: flex;
 }
 form select {
   padding-right: 5px;
@@ -144,17 +155,14 @@ form select {
   border: none;
   cursor: pointer;
 }
-.select-div {
-  height: 59px;
-  border: 1px solid #d8e2f3;
-  padding: 5px;
-  font-size: 16px;
-  display: flex;
-}
 .select-div::after {
   content: url("../Form//assets/Icon\ feather-chevron-right.png");
+  position:absolute;
   margin-top: 20px;
+  right: 20px;
   padding-right: 10px;
+  cursor: pointer;
+  pointer-events: none;
 }
 
 .option {
@@ -167,7 +175,9 @@ form select {
 .checkbox-div {
   display: flex;
   justify-content: space-between;
-  width: 26%;
+  width:auto;
+  gap: 10px;
+  align-items: center;
 }
 .btn {
   width: 80%;
@@ -193,36 +203,148 @@ form select {
   font-weight: 600;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1040px) {
   .main {
+    width: 100%;
     flex-direction: column;
+    height: auto;
   }
   .left {
+    width: 100%;
+    height: 60vh;
     background-position: center;
     background-size: cover;
+    flex-direction: column;
   }
-  .left,
+
+  .head {
+    top: 10px;
+  }
+  .head h4 {
+    top: 0px;
+    width: 100%;
+  }
+  .head h5 {
+    width: 100%;
+  }
   .right {
     width: 100%;
-    height: 50vh;
+  }
+  .items {
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    opacity: 0.8;
+  }
+  .items li {
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .h-para {
+    bottom: 70px;
+    left: 30%;
+    margin: auto;
+    text-align: center;
   }
   .icons {
-    width: 100%;
     flex-wrap: wrap;
     height: auto;
     flex-direction: row;
     justify-content: center;
     gap: 5px;
-    bottom: 0px;
-    left: 10px;
+    bottom: 0;
+    margin: auto;
   }
   .images {
     height: 70px;
   }
-  .h-para {
-    bottom: 300px;
-    left: 10px;
-    text-align: center;
+  .checkbox-div {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    max-width: 40%;
   }
 }
 
+@media only screen and (max-width: 630px) {
+  .left {
+    width: 100%;
+  }
+  .head {
+    top: 10px;
+    left: 30px;
+  }
+  .head h4 {
+    font-size: 16px;
+  }
+  .head h5 {
+    font-size: 14px;
+  }
+  .items {
+    top: 75px;
+    left: 30px;
+  }
+  .h-para {
+    bottom: 150px;
+    left: 10%;
+  }
+  .icons {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  .right {
+    width: 100%;
+  }
+  .content {
+    width: 100%;
+  }
+  h2 {
+    margin: auto;
+  }
+  .input-div {
+    width: 90%;
+    margin: auto;
+  }
+  .select-div {
+    width: 90%;
+    margin: auto;
+  }
+  .div{
+    
+    width:90%;
+    margin: auto;
+  }
+  .checkbox-div{
+    width: auto;
+    height: 100%;
+  }
+  .checkbox-div label{
+    font-size: 12px;
+  }
+  .a-link{
+    font-size: 13px;
+  }
+
+  .signup-div p{
+    font-size: 13px;
+  }
+}
+.dark{
+  background: #000108;
+  color: #ffffff;
+}
+
+
+.toggle-btn{
+  cursor: pointer;
+  width: 10em;
+  height: 2rem;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
