@@ -15,10 +15,10 @@
 
 .left {
   background: url("./assets/Group\ 30855.png") no-repeat;
+  display: flex;
   background-position: center;
   background-size: cover;
   width: 45%;
-  height: 781px;
   position: relative;
 }
 
@@ -26,30 +26,30 @@
   width: 55%;
   background: #f1f1f1;
 }
-.head{
-    position: absolute;
-    top: 30px;
-    left: 40px;
+.head {
+  position: absolute;
+  top: 30px;
+  left: 40px;
 }
-.items{
-    position:absolute;
-    top: 155px;
-    left: 40px;
-    opacity: 0.8;
+.items {
+  position: absolute;
+  top: 155px;
+  left: 40px;
+  opacity: 0.8;
 }
-.h-para{
-    position:absolute;
-    bottom: 200px;
-    left: 150px;
-    letter-spacing: 0.5px;
+.h-para {
+  position: absolute;
+  bottom: 200px;
+  left: 150px;
+  letter-spacing: 0.5px;
 }
-.icons{
-    position: absolute;
-    bottom: 20px;
-    left: 70px;
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
+.icons {
+  position: absolute;
+  bottom: 20px;
+  left: 70px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .content {
@@ -66,12 +66,12 @@
   height: 500px;
   gap: 20px;
 }
-h5 {
+.head h5 {
   font-size: 26px;
   font-weight: 500;
   color: #ffffff;
 }
-h4 {
+.head h4 {
   font-size: 28px;
   font-weight: 500;
   color: #ffffff;
@@ -129,32 +129,32 @@ h2 {
   justify-content: space-between;
   align-items: center;
 }
-form select{
-    padding-right: 5px;
-    appearance: none;
-    gap: 5px;
-    height: 59px;
-    width: 100%;
-    border-radius: 10px;
-    outline: none;
-    padding-left: 5px;
-    font-size: 18px;
-    color: #000000;
-    background: transparent;
-    border: none;
-    cursor: pointer;
+form select {
+  padding-right: 5px;
+  appearance: none;
+  gap: 5px;
+  height: 59px;
+  width: 100%;
+  border-radius: 10px;
+  outline: none;
+  padding-left: 5px;
+  font-size: 18px;
+  color: #000000;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
-.select-div{
+.select-div {
   height: 59px;
   border: 1px solid #d8e2f3;
   padding: 5px;
   font-size: 16px;
   display: flex;
 }
-.select-div::after{
-    content:url('../Form//assets/Icon\ feather-chevron-right.png');
-    margin-top: 20px;
-    padding-right: 10px;
+.select-div::after {
+  content: url("../Form//assets/Icon\ feather-chevron-right.png");
+  margin-top: 20px;
+  padding-right: 10px;
 }
 
 .option {
@@ -192,3 +192,38 @@ form select{
   color: #3a86ff;
   font-weight: 600;
 }
+
+@media screen and (max-width: 1150px) {
+  .main {
+    flex-direction: column;
+  }
+  .left {
+    background-position: center;
+    background-size: cover;
+  }
+  .left,
+  .right {
+    width: 100%;
+    height: 50vh;
+    border: 2px solid black;
+  }
+  .icons {
+    width: 100%;
+    flex-wrap: wrap;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+    bottom: 0px;
+    left: 10px;
+  }
+  .images {
+    height: 70px;
+  }
+  .h-para {
+    bottom: 300px;
+    left: 10px;
+    text-align: center;
+  }
+}
+
